@@ -47,6 +47,6 @@ When prompted, you can just enter a question related to the document's content, 
 - Replace `your_openai_api_key` with your actual OpenAI API key in the `.env` file.
 - Make sure to adjust the Python notebook name and structure in the README if they differ from the provided example.
 
-  ## FlowChart
+## FlowChart
 
-  ![image](https://github.com/user-attachments/assets/708f8e11-d61e-4c9c-a5ef-08a46746a07d)
+![image](https://github.com/user-attachments/assets/708f8e11-d61e-4c9c-a5ef-08a46746a07d)
