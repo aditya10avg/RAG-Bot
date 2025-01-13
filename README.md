@@ -43,7 +43,7 @@ Run the notebooks to interact with the AI query system:
 Input a Query
 When prompted, you can just enter a question related to the document's content, and the system will generate a relevant answer.
 
-### Notes:
+## Notes:
 - Replace `your_openai_api_key` with your actual OpenAI API key in the `.env` file.
 - Make sure to adjust the Python notebook name and structure in the README if they differ from the provided example.
 
