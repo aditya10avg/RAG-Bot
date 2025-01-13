@@ -13,6 +13,11 @@ You also need to install the necessary libraries:
 ```bash
 pip install langchain langchain-community python-dotenv Chroma openai
 ```
+OR
+```bash
+pip install -r requirements.txt
+```
+This one is preferred.
 
 ## Project Setup
 1. Load Environment Variables
