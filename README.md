@@ -1,57 +1,47 @@
-# Q&A bot with RAG (Retriever)
+# AI Agent Query System
 
-This project demonstrates how to process, chunk, and index documents using LangChain to build a vector store for retrieving information about AI agents. It supports multiple document types like text, web pages, and PDFs, and uses OpenAI embeddings for similarity search.
+This project uses Langchain and various language model tools to process documents, split them into chunks, embed them, and retrieve the most relevant answers to a given query. The AI Agent Query System leverages GPT-4 for generating step-by-step answers based on the context provided from document embeddings.
 
-## FEATURES
+## Prerequisites
 
-- Load documents from:
-  - Text files
-  - Web pages
-  - PDF files
-- Process documents by chunking with customizable size and overlap.
-- Index documents in a vector store using OpenAI embeddings.
-- Perform a similarity search to retrieve the most relevant documents for a query.
+Before running the project, ensure you have the following installed:
+- Python 3.12 or greater than 3.10
+- pip
+- [OpenAI API Key](https://beta.openai.com/signup/)
 
-## REQUIREMENTS
+You also need to install the necessary libraries:
+```bash
+pip install langchain langchain-community python-dotenv Chroma openai
+```
 
-- Python 3.7+
-- Libraries:
-  - `langchain-community`
-  - `dotenv`
-  - `bs4`
-  - `chromadb`
+## Project Setup
+1. Load Environment Variables
+Create a .env file in the root directory and add your OpenAI API key:
+```bash
+OPEN_AI_API_KEY=your_openai_api_key
+```
+2. Document Loading and Preprocessing
+The system allows you to load a document (e.g., a PDF) and split it into smaller chunks for easier processing and better query responses.
 
-## Installation
+3. Embedding and Vector Storage
+The document chunks are embedded using the OpenAI API and stored in a Chroma vector store. This allows for similarity searches based on the content of the documents.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/aditya10avg/RAG-Pipeline---LangChain-.git
-   cd RAG-Pipeline---LangChain-
-   ```
-2. Create a virtual environment and activate it:
+4. Retrieval and Query Response
+A retriever is created to search for the most relevant document chunks based on a user query. The relevant context is then passed to GPT-4 for generating a detailed answer.
 
-  ```bash
-    python3 -m venv venv
-    source venv/bin/activate   # On Windows: venv\Scripts\activate
-  ```
-3. Install dependencies
-   ```bash
-      pip install -r requirements.txt
-   ```
-4. Set up your .env file.
-  ```bash
-    OPEN_AI_API_KEY=your_openai_api_key
-  ```
-## USAGE
-#### 1. SCRAPPING WEB PAGE FOR Q&A
-#### 2. PDF Q&A
+## How to Run
+Prepare your PDF
+You can place your document, e.g., ai_agents.pdf, in the project directory instead of the default pdf.
 
-## TECH STACKS USED
-#### 1. OPENAI EMBEDDINGS
-#### 2. LANGCHAIN
-#### 3. BEAUTIFUL SOUP
-#### 4. CHROMA DB
+Run the notebooks to interact with the AI query system:
 
-## RAG WORKFLOW FOR DOCUMENT PROCESSING AND CREATING A Q&A WITH ITS VECTORE STORAGE
+Input a Query
+When prompted, you can just enter a question related to the document's content, and the system will generate a relevant answer.
 
-![image](https://github.com/user-attachments/assets/1c4310a9-cf9a-406c-9d2b-25d9239d8dc5)
+### Notes:
+- Replace `your_openai_api_key` with your actual OpenAI API key in the `.env` file.
+- Make sure to adjust the Python notebook name and structure in the README if they differ from the provided example.
+
+  ## FlowChart
+
+  ![image](https://github.com/user-attachments/assets/708f8e11-d61e-4c9c-a5ef-08a46746a07d)
