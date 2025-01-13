@@ -1,4 +1,4 @@
-# AI AGENT DOCUMENT PROCESSING WITH LANGCHAIN
+# Q&A bot with RAG (Retriever)
 
 This project demonstrates how to process, chunk, and index documents using LangChain to build a vector store for retrieving information about AI agents. It supports multiple document types like text, web pages, and PDFs, and uses OpenAI embeddings for similarity search.
 
